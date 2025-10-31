@@ -37,7 +37,7 @@ export function Projects() {
     },
     {
       title: "Consultoria de T.I",
-      description: "Aplicativo de gerenciamento de tarefas com colaboração em tempo real e notificações.",
+      description: "Site Freelance de uma consultoria de tecnologia.",
       image: "/consultoria-ti.jpg",
       tags: ["React", "TypeScript", "Html", "Css"],
       github: "https://github.com/Victor-0010z/Techline.git",

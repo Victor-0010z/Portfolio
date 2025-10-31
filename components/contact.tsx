@@ -205,7 +205,7 @@ export function Contact() {
             }`}
             style={{ animationDelay: "0.6s" }}
           >
-            <p className="text-muted-foreground">© 2025 Seu Nome. Todos os direitos reservados.</p>
+            <p className="text-muted-foreground">© 2025 Victor. Todos os direitos reservados.</p>
           </div>
         </div>
       </div>
