@@ -31,7 +31,7 @@ export function Skills() {
         { name: "JavaScript", level: 95 },
         { name: "React", level: 80 },
         { name: "Tailwind CSS", level: 88 },
-        { name: "Next", level: 70 },
+        { name: "jQuery", level: 70 },
       ],
     },
     {
@@ -39,8 +39,8 @@ export function Skills() {
       skills: [
         { name: "Java", level: 80 },
         { name: "Node.js", level: 82 },
-        { name: "MySQL", level: 70 },
-        { name: "Xml", level: 88 },
+        { name: "Docker", level: 70 },
+        { name: "APIs", level: 88 },
       ],
     },
     {

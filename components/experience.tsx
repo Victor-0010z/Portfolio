@@ -27,11 +27,11 @@ export function Experience() {
 
   const experiences = [
     {
-      company: "Faculdade de ADS — 1º semestre",
+      company: "Universidade de T-ADS — 1º semestre",
       position: "Desenvolvedor Full Stack em Formação",
       period: "2025 — 18 anos",
       description:
-        "Início da graduação em Análise e Desenvolvimento de Sistemas e criação de projetos pessoais com React, Node.js, Java e com C++.",
+        "Início da graduação de Tecnologia em Análise e Desenvolvimento de Sistemas e criação de projetos pessoais com React, Node.js, Java e com C++.",
       achievements: [
         "Aprendeu a desenvolver projetos de IoT",
         "Liderou projeto Nimbus da faculdade na parte front-end",
