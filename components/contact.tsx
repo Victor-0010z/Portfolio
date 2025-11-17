@@ -150,14 +150,21 @@ export function Contact() {
               className={`lg:col-span-2 p-8 ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
               style={{ animationDelay: "0.3s" }}
             >
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">
                       Nome
                     </label>
-                    <Input id="name" placeholder="Seu nome" className="transition-all focus:scale-[1.02]" />
+                    <Input
+                      id="name"
+                      placeholder="Seu nome"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="transition-all focus:scale-[1.02]"
+                    />
                   </div>
+
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
                       Email
@@ -166,6 +173,8 @@ export function Contact() {
                       id="email"
                       type="email"
                       placeholder="seu@email.com"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="transition-all focus:scale-[1.02]"
                     />
                   </div>
@@ -175,7 +184,13 @@ export function Contact() {
                   <label htmlFor="subject" className="text-sm font-medium">
                     Assunto
                   </label>
-                  <Input id="subject" placeholder="Como posso ajudar?" className="transition-all focus:scale-[1.02]" />
+                  <Input
+                    id="subject"
+                    placeholder="Como posso ajudar?"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="transition-all focus:scale-[1.02]"
+                  />
                 </div>
 
                 <div className="space-y-2">
@@ -186,15 +201,35 @@ export function Contact() {
                     id="message"
                     placeholder="Conte-me sobre seu projeto..."
                     rows={6}
+                    value={formData.message}
+                    onChange={handleChange}
                     className="transition-all focus:scale-[1.02] resize-none"
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full group hover:scale-[1.02] transition-transform">
-                  Enviar Mensagem
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full group hover:scale-[1.02] transition-transform"
+                >
+                  {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                   <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
+
+                {/* Mensagens de status */}
+                {submitStatus === "success" && (
+                  <p className="text-green-500 flex items-center gap-2">
+                    <CheckCircle2 className="w-5 h-5" /> Mensagem enviada com sucesso!
+                  </p>
+                )}
+
+                {submitStatus === "error" && (
+                  <p className="text-red-500 flex items-center gap-2">
+                    <AlertCircle className="w-5 h-5" /> {errorMessage}
+                  </p>
+                )}
               </form>
+
             </Card>
           </div>
 
